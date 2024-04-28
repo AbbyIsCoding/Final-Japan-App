@@ -17,6 +17,8 @@ function CheckBoxPage() {
   const value = collection(database, "numbers");
   const [val, setVal] = useState([]);
 
+
+
   const [show, setShow] = useState(false); 
 
   const checkBoxes = [
@@ -46,7 +48,11 @@ function CheckBoxPage() {
     const updatedCheckedState = checkedState.map((item, idx) =>
       idx === index ? !item : item
     );
+
     setCheckedState(updatedCheckedState);
+    
+
+    
   };
 
   useEffect(() => {
@@ -58,8 +64,9 @@ function CheckBoxPage() {
   });
 
   const handleCreate = async () => {
+    console.log(countCheckedCheckboxes())
     await addDoc(value, {
-      boxes: totalChecks,
+      boxes: countCheckedCheckboxes(),
     });
   };
 
@@ -85,6 +92,8 @@ function CheckBoxPage() {
   return (
     <div className="container">
 
+        <h1>Your checkbox list</h1>
+
     
 
       <strong>You've completed {countCheckedCheckboxes()}</strong>
@@ -97,11 +106,11 @@ function CheckBoxPage() {
 
 
 
-      {!show ? (
-        <button onClick={handleCreate}>Create</button>
-      ) : (
-        <button onClick={handleUpdate}>Update</button>
-      )}
+    
+        <button onClick={handleCreate}>Update your total!</button>
+      
+     {/* <button onClick={handleUpdate}>Update</button> */}
+   
 
       
 
