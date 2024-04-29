@@ -38,6 +38,63 @@ function CheckBoxPage() {
     " Ride the subway or a public bus (just with your host-family)",
     " Watch a movie in Japanese",
     " Take a photo of a sign with very strange English",
+
+    " Attended a festival or life event", 
+    " Attended baseball game or other sporting event",  
+    " Cosplay", 
+    " Karaoke (attended)", 
+    " Karaoke (actually sang)",
+    " Kimono (wore)",
+    " Idoru concert", 
+    " Martial arts", 
+    " Pokemon center",  
+    " Photo booth", 
+    " Sporting event (took part)", 
+    " Osen/public bath", 
+    " Tea ceremony", 
+    " Video game arcade", 
+    
+    " Anpan (red bean paste bread)",
+    " Anago (conger eel)", 
+    " Basashi (horse sushi)", 
+    " Coolish (Vietnamese-style drinkable ice cream)", 
+    " Goya (bitter gourd)", 
+    " Green Tea flavored Kitkat", 
+    " Gyutan (cow tongue)",
+    " Ika (squid)",
+    " Ikasumi (squid ink)",
+    " Ikura (salmon eggs)",
+    " Inago (locust)",
+    " Melonpan (melon-shaped bread)",
+    " Namako (sea slug)",
+    " Nankotsu (fried chicken cartilage)",
+    " Natto (fermented soybeans)",
+    " Onigiri (rice balls with filling)",
+    " Pokari sweat (soft drink)",
+    " Qoo (soft drink)",
+    " Ramen noodle soup",
+    " Soba noodles",
+    " Shirako (fish testes)",
+    " Sushi (any kind)",
+    " Tako (raw octopus)",
+    " Takoyaki (fried octopus)",
+    " Unagi (eel)",
+    " Uni (sea urchin)",
+
+    " Aeon Mall",
+    " Beard Papa",
+    " Bicu Camera",
+    " Book Off",
+    " Daimar!",
+    " Daiso",
+    " DonQuijote",
+    " Ichiran",
+    " Lucky Pierrot",
+    " Mr. Donut",
+    " Uniqlo",
+
+
+
   ];
 
  
@@ -79,10 +136,11 @@ function CheckBoxPage() {
   };
 
   const handleUpdate = async () => {
-    const updateData = doc(database, "numbers", id);
+    const updateData = doc(database, "users", id);
 
     await updateDoc(updateData, {
-      boxes: totalChecks,
+   
+      boxes: countCheckedCheckboxes(),
     });
   };
 
