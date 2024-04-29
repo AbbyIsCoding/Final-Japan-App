@@ -3,6 +3,8 @@ import { auth } from "./firebase.config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 
+
+
 const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");

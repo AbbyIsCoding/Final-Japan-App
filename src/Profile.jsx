@@ -2,9 +2,14 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "./firebase.config";
 import { signOut } from "firebase/auth";
 
+import CheckBoxPage from "./CheckBoxPage";
+import Leaderboard from "./Leaderboard";
+
+
 const Profile = () => {
     const navigate = useNavigate();
     const user = auth.currentUser;
+    console.log( user.email )
 
     const logoutUser = async (e) => {
         e.preventDefault();
@@ -21,9 +26,25 @@ const Profile = () => {
                     <div className = "d-grid gap-2">
                         <button type = "submit" className = "btn btn-primary pt-3 pb-3" onClick = {(e) => logoutUser(e)}>Logout</button>
                       
-                    </div>                
+                    </div>      
+                            
                 </div>
             </div>
+
+            <div>
+                
+                
+                <div> 
+                    <CheckBoxPage/>
+                    <Leaderboard/>
+                    
+                    
+                </div>
+                
+
+            </div>  
+
+            
         </div>       
     )    
 }

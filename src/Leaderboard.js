@@ -17,7 +17,7 @@ import {
 function Leaderboard() {
   const [val, setVal] = useState([]);
 
-  const value = collection(database, "numbers");
+  const value = collection(database, "users");
 
   const [data, setData] = useState([]);
 
@@ -56,7 +56,7 @@ function Leaderboard() {
       <div>
         {data.map((item) => (
           <div key={item.id}>
-            <p>{ item.id + " " + item.boxes}</p>{" "}
+            <p>{ item.user + " " + item.boxes}</p>{" "}
             
            
           </div>

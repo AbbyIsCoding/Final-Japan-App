@@ -17,6 +17,7 @@ const Signup = () => {
             try {
                 await createUserWithEmailAndPassword(auth, email, password);
                 navigate("/");
+               
             } catch {
                 setNotice("Sorry, something went wrong. Please try again.");
             }     
