@@ -52,17 +52,12 @@ function Leaderboard() {
 
    
 
-      {/* {val.map((values) => (
-        <div>
-          <p>{values.id + " " + values.boxes}</p>
-        </div>
-      ))} */}
-
+      
       <div>
         {data.map((item) => (
           <div key={item.id}>
             <p>{ item.id + " " + item.boxes}</p>{" "}
-            {/* Replace "name" with the actual field name in your Firestore document */}
+            
            
           </div>
         ))}
