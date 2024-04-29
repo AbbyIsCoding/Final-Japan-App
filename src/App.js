@@ -5,14 +5,15 @@ import './App.css';
 import DemoWork from './DemoWork'
 import CheckBoxPage from './CheckBoxPage';
 import Leaderboard from './Leaderboard'
-
+import Sorting from './Sorting'
 
 function App() {
   return (
     <div>
-      <DemoWork/>
+      {/* <DemoWork/> */}
       <CheckBoxPage/>
       <Leaderboard/>
+
     </div>
   );
 }
