@@ -121,7 +121,7 @@ function CheckBoxPage() {
           <h1>{values.number1}</h1>
           <h1>{values.number2}</h1>
 
-          <button onClick={() => handleDelete(values.id)}>Delete</button>
+          {/* <button onClick={() => handleDelete(values.id)}>Delete</button> */}
          
         </div>
       ))}

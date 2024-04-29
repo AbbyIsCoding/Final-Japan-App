@@ -50,23 +50,18 @@ function Leaderboard() {
     <div>
       <h1>Leaderboard</h1>
 
-      <ul>
-        {myArray.map((number, index) => (
-          <li key={index}>{number}</li>
-        ))}
-      </ul>
-      <button onClick={sortAscending}> Sort Ascending </button>
+   
 
-      {val.map((values) => (
+      {/* {val.map((values) => (
         <div>
           <p>{values.id + " " + values.boxes}</p>
         </div>
-      ))}
+      ))} */}
 
       <div>
         {data.map((item) => (
           <div key={item.id}>
-            <p>{item.boxes}</p>{" "}
+            <p>{ item.id + " " + item.boxes}</p>{" "}
             {/* Replace "name" with the actual field name in your Firestore document */}
            
           </div>
